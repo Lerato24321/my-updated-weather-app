@@ -6,4 +6,4 @@ function searchCity(event) {
 }
 
 let searchButton = document.querySelector("#search-form");
-searchButton.addEventListener("click", searchCity);
+searchButton.addEventListener("submit", searchCity);
