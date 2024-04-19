@@ -95,8 +95,8 @@ hr {
 }
 
 .main-weather-info {
-    display: flex;
-    margin-top: 20px;
+  display: flex;
+  margin-top: 20px;
 }
 
 .main-temperature {
@@ -111,11 +111,23 @@ hr {
   font-size: 12px;
 }
 
+.hourly-weather {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  margin-left: 40px;
+  padding: 10px;
+}
 
-
-
-
-
+.hour {
+  color: rgb(230, 146, 160);
+  margin: 5px;
+  border: 2px solid pink;
+  border-radius: 14px;
+  padding: 8px;
+  width: 85px;
+  text-align: center;
+}
 
 
 
@@ -131,8 +143,7 @@ hr {
   text-align: center;
 }
 
-
-    .city {
+.city {
   background-color: rgb(245, 201, 208);
   width: 350px;
   height: 20px;
