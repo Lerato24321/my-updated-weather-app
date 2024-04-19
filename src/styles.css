@@ -10,10 +10,9 @@ img {
   height: 180px;
 }
 
-
 .main-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .main-weather {
@@ -23,15 +22,14 @@ img {
   border: 4px solid pink;
   border-radius: 20px;
   box-shadow: 3px 3px 2px rgb(255, 124, 124);
-
 }
 
 .form {
-    display: flex;
+  display: flex;
 }
 
 .enter-city {
-    width: 400px;
+  width: 400px;
   height: 25px;
   border: 2px solid pink;
   border-radius: 10px;
@@ -40,7 +38,7 @@ img {
 }
 
 .search-button {
-    width: 100px;
+  width: 100px;
   height: 30px;
   margin-left: -2px;
   background-color: white;
@@ -58,7 +56,7 @@ img {
 }
 
 .my-location {
-      width: 50px;
+  width: 50px;
   height: 28px;
   background-color: white;
   margin-left: -3px;
@@ -66,8 +64,7 @@ img {
   border: 2px solid pink;
   border-radius: 10px;
   transition: all 200ms ease-in-out;
-
-} 
+}
 
 .my-location:hover {
   color: white;
@@ -77,4 +74,31 @@ img {
   cursor: pointer;
 }
 
+.popular-places {
+  margin: 100px 0 0 30px;
+}
 
+.popular-places-heading {
+  text-align: center;
+}
+
+
+    .city {
+  background-color: rgb(245, 201, 208);
+  width: 350px;
+  height: 20px;
+  padding: 20px 15px;
+  border-radius: 15px 20px 50px;
+  border-style: inset;
+  box-shadow: 2px 3px 2px rgb(255, 124, 124);
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+
+.city:hover {
+  color: white;
+  background-color: pink;
+  border: 1px solid white;
+  box-shadow: 2px 2px grey;
+  cursor: pointer;
+}
