@@ -8,6 +8,16 @@ body {
 img {
   width: 180px;
   height: 180px;
+  margin-left: 100px;
+  margin-top: -10px;
+}
+
+hr {
+  width: 1px;
+  margin-top: 25px;
+  margin-left: 40px;
+  height: 70px;
+  background-color: pink;
 }
 
 .main-container {
@@ -73,6 +83,45 @@ img {
   box-shadow: 2px 2px grey;
   cursor: pointer;
 }
+
+.weather-details-1 {
+  margin: 20px 0 0 50px;
+  font-size: 30px;
+}
+
+.weather-details {
+  margin: 0 0 0 50px;
+  font-size: 15px;
+}
+
+.main-weather-info {
+    display: flex;
+    margin-top: 20px;
+}
+
+.main-temperature {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-left: 25px;
+}
+
+.details {
+  margin-right: 120px;
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .popular-places {
   margin: 100px 0 0 30px;
