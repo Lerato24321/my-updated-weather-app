@@ -11,110 +11,73 @@
     <title>My Weather App</title>
   </head>
   <body>
-
-
     <div class="main-container">
+      <div class="main-weather">
+        <div class="form">
+          <form id="search-form">
+            <input
+              type="text"
+              placeholder="Enter a city..."
+              class="enter-city"
+              id="enter-city-name"
+              required
+            />
+            <input type="submit" value="Search" class="search-button" />
+            <input type="submit" value="📍" class="my-location" />
+          </form>
+        </div>
 
-
-        <div class="main-weather">
-            <div class="form">
-            <form>
-              <input type="text" placeholder="Enter a city..." class="enter-city">
-              <input type="submit" value="Search" class="search-button">
-              <input type="submit" value="📍" class="my-location">
-            </form>
-            </div>
-
-            <p class="weather-details-1" id="weather-details-1">Bophelong</p>
+        <p class="weather-details-1" id="weather-app-city-name">Bophelong</p>
         <p class="weather-details">Friday, 19 April</p>
         <p class="weather-details">16:42</p>
 
-
         <section class="main-weather-info">
-           <img src="src/sunshine.png" alt="">
-           <h2 class="main-temperature">20°C</h2>
-            <hr />
-            <p class="details">
-              💧Humidity : 80% <br />
-              <br />
-              🍃 Wind : 2km/h
-            </p>
+          <img src="src/sunshine.png" alt="" />
+          <h2 class="main-temperature">20°C</h2>
+          <hr />
+          <p class="details">
+            💧Humidity : 80% <br />
+            <br />
+            🍃 Wind : 2km/h
+          </p>
         </section>
 
         <section class="hourly-weather">
-
-            <p class="hour">
-              23:00 <br />
-              ⛅ <br />
-              16℃ | 14℃
-            </p>
-            <p class="hour">
-              02:00 <br />
-              🌤️ <br />
-              02℃ | 4℃
-            </p>
-            <p class="hour">
-              05:00 <br />
-              ☀️ <br />
-              12℃ | 18℃
-            </p>
-            <p class="hour">
-              08:00 <br />
-              ☀️ <br />
-              23℃ | 18℃
-            </p>
-            <p class="hour">
-              11:30 <br />
-              ☁️ <br />
-              10℃ | 8℃
-            </p>
+          <p class="hour">
+            23:00 <br />
+            ⛅ <br />
+            16℃ | 14℃
+          </p>
+          <p class="hour">
+            02:00 <br />
+            🌤️ <br />
+            02℃ | 4℃
+          </p>
+          <p class="hour">
+            05:00 <br />
+            ☀️ <br />
+            12℃ | 18℃
+          </p>
+          <p class="hour">
+            08:00 <br />
+            ☀️ <br />
+            23℃ | 18℃
+          </p>
+          <p class="hour">
+            11:30 <br />
+            ☁️ <br />
+            10℃ | 8℃
+          </p>
         </section>
+      </div>
 
-
-
-
-
-        </div>
-
-
-
-       
-        
-        
-
-
-
-        <div class="popular-places">
-         <h2 class="popular-places-heading">P O P U L A R &nbsp; P L A C E S</h2>
-          <p class="city">New York City</p>
-          <p class="city">Paris</p>
-          <p class="city">Cape Town</p>
-        </div>
-    
-    
+      <div class="popular-places">
+        <h2 class="popular-places-heading">P O P U L A R &nbsp; P L A C E S</h2>
+        <p class="city">New York City</p>
+        <p class="city">Paris</p>
+        <p class="city">Cape Town</p>
+      </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </body>
 
   <script src="src/java.js"></script>
