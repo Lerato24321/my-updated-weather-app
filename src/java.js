@@ -14,27 +14,14 @@ function updateWeatherInfo(response) {
   let wind = Math.round(response.data.wind.speed);
   displayWind.innerHTML = wind;
 
-  let now = new Date();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
-  let day = days[now.getDay()];
-  let displayDay = document.querySelector("#weather-app-day");
-  displayDay.innerHTML = day;
-
-
+  let displayTime = document.querySelector("#current-time");
+  let date = new Date(response.data.time * 1000);
+  displayTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
 }
 
 function displayCity(city) {
   let apiKey = "700ad940f9ffadd843o04ae7ba43d1t8";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
   axios.get(apiUrl).then(updateWeatherInfo);
 }
