@@ -16,7 +16,18 @@ function updateWeatherInfo(response) {
 
   let displayTime = document.querySelector("#current-time");
   let date = new Date(response.data.time * 1000);
-  displayTime.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+  let hours = date.getHours();
+  if (hours < 10) {
+        hours = `0${hours}`;
+      }
+  let minutes = date.getMinutes()
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  displayTime.innerHTML = `${hours}:${minutes}`;
+
+  let displayDay = document.querySelector("#weather-app-day");
+  displayDay.innerHTML = formatDate(date);
 }
 
 function displayCity(city) {
@@ -31,6 +42,41 @@ function searchCity(event) {
   let cityElement = document.querySelector("#enter-city-name");
 
   displayCity(cityElement.value);
+}
+
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+
+  let dayIndex = date.getDate();
+
+  let year = date.getFullYear();
+
+  return `${day}, ${dayIndex} ${month} ${year}`;
 }
 
 let searchButton = document.querySelector("#search-form");
