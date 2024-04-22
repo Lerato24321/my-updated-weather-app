@@ -14,13 +14,15 @@ function updateWeatherInfo(response) {
   let wind = Math.round(response.data.wind.speed);
   displayWind.innerHTML = wind;
 
+  
+
   let displayTime = document.querySelector("#current-time");
   let date = new Date(response.data.time * 1000);
   let hours = date.getHours();
   if (hours < 10) {
-        hours = `0${hours}`;
-      }
-  let minutes = date.getMinutes()
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -28,6 +30,9 @@ function updateWeatherInfo(response) {
 
   let displayDay = document.querySelector("#weather-app-day");
   displayDay.innerHTML = formatDate(date);
+
+  let weatherIcon = document.querySelector("#weather-app-icon");
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
 }
 
 function displayCity(city) {

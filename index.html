@@ -17,10 +17,11 @@
         <div class="form">
           <form id="search-form">
             <input
-              type="text"
+              type="search"
               placeholder="Enter a city..."
               class="enter-city"
               id="enter-city-name"
+              autocomplete="off"
               required
             />
             <input type="submit" value="Search" class="search-button" />
@@ -35,7 +36,9 @@
         <p class="weather-details" id="current-time"></p>
 
         <section class="main-weather-info">
-          <img src="src/sunshine.png" alt="" />
+          <div id="weather-app-icon">
+          <img src="src/sunshine.png" alt="Sunshine icon" id="icon"/>
+          </div>
           <h2 class="main-temperature">
             <span id="main-temperature"></span>°C
           </h2>
