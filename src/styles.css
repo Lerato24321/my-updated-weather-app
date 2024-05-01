@@ -20,6 +20,12 @@ hr {
   background-color: pink;
 }
 
+small {
+  font-size: 14px;
+  margin-left: 2px;
+  color: rgb(245, 184, 195)
+}
+
 footer {
   font-family: cursive;
   font-size: 12px;
