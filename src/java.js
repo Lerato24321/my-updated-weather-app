@@ -14,6 +14,7 @@ function updateWeatherInfo(response) {
   let wind = Math.round(response.data.wind.speed);
   displayWind.innerHTML = wind;
 
+
   
 
   let displayTime = document.querySelector("#current-time");
