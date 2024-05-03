@@ -103,28 +103,42 @@ function getForecast (city) {
 
 // instead of repeating the code many times, use a loop.
 function displayForecast (response) {
+
+
   
   
+
 let forecastHtml = "";
 
-let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
-days.forEach(function(day) {
 
-forecastHtml =  forecastHtml + 
-`
+response.data.daily.forEach(function(day, index) {
 
- <p class="hour">
-           <span> ${day} </span> <br />
-            <span> ⛅ </sapn> <br />
-           <span> 16℃ </span> &nbsp; <span>  <small>14℃</small> </span>
+  if (index < 4) {
+
+forecastHtml =
+  forecastHtml +
+  `
+
+ <p class="day">
+           <span> Friday </span> <br />
+            <span> 
+
+            <img src="${day.condition.icon_url}"  class="forecast-icon" />
+            
+            </sapn> <br />
+           <span id="max-temperature" > ${Math.round(
+             day.temperature.maximum
+           )}℃ </span> &nbsp; <span  id="min-temperature">  
+           <small>${Math.round(day.temperature.minimum)}℃</small> </span>
           </p>
 
 `;
+  }
 
 
 });
 
-let forecastElement = document.querySelector("#hourly-weather");
+let forecastElement = document.querySelector("#daily-weather");
 forecastElement.innerHTML = forecastHtml;
 
 }

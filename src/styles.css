@@ -23,6 +23,7 @@ hr {
 small {
   font-size: 14px;
   margin-left: 2px;
+  padding-top: 20px;
   color: rgb(245, 184, 195)
 }
 
@@ -123,7 +124,7 @@ footer {
   font-size: 12px;
 }
 
-.hourly-weather {
+.daily-weather {
   display: flex;
   justify-content: space-evenly;
   margin-top: 15px;
@@ -131,11 +132,10 @@ footer {
   padding: 10px;
 }
 
-.hour {
+.day {
   color: rgb(230, 146, 160);
   margin: 5px;
-  border: 2px solid pink;
-  border-radius: 14px;
+
   padding: 8px;
   width: 85px;
   text-align: center;
@@ -167,4 +167,19 @@ footer {
   border: 1px solid white;
   box-shadow: 2px 2px grey;
   cursor: pointer;
+}
+
+.forecast-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(191, 176, 179, 0.5);
+  border-radius: 50%;
+  opacity: 20px;
+  
+}
+
+.daily-temperature {
+  margin-top: 40px;
 }
