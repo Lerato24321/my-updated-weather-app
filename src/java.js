@@ -85,7 +85,46 @@ function formatDate(date) {
   return `${day}, ${dayIndex} ${month} ${year}`;
 }
 
+
+
+
+
+function displayForecast () {
+
+
+
+
+
+let forecast = document.querySelector("#hourly-weather");
+
+forecast.innerHTML = `
+
+ <p class="hour">
+            23:00 <br />
+            ⛅ <br />
+           16℃ &nbsp; <small>14℃</small>
+          </p>
+
+`;
+
+
+
+}
+
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", searchCity);
 
 displayCity("Vanderbijlpark");
+
+displayForecast ();
+
+
+
+
+
+
+
+
+
+
+    
