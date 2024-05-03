@@ -176,7 +176,7 @@ footer {
   height: 40px;
   display: block;
   margin: 10px auto -10px;
-  background-color: rgb(245, 201, 208);
+  border: 1px solid white;
   border-radius: 50%;
   opacity: 20px;
   

@@ -37,8 +37,6 @@ function updateWeatherInfo(response) {
 
   getForecast(response.data.city);
 
-
-
 }
 
 function displayCity(city) {
@@ -54,6 +52,8 @@ function searchCity(event) {
 
   displayCity(cityElement.value);
 }
+
+
 
 function formatDate(date) {
   let days = [
@@ -91,6 +91,14 @@ function formatDate(date) {
 }
 
 
+function formatDay(timestamp) {
+  let date = new Date (timestamp * 1000);
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  
+  return days[(date.getDay())];
+
+}
+
 function getForecast (city) {
 
   let apiKey = "700ad940f9ffadd843o04ae7ba43d1t8";
@@ -102,11 +110,7 @@ function getForecast (city) {
 
 
 // instead of repeating the code many times, use a loop.
-function displayForecast (response) {
-
-
-  
-  
+function displayForecast (response) { 
 
 let forecastHtml = "";
 
@@ -120,7 +124,7 @@ forecastHtml =
   `
 
  <p class="day">
-           <span> Friday </span> <br />
+           <span> ${formatDay(day.time)} </span> <br />
             <span> 
 
             <img src="${day.condition.icon_url}"  class="forecast-icon" />
@@ -135,8 +139,68 @@ forecastHtml =
 `;
   }
 
-
 });
+
+
+function viewCity() {
+  let cityElement = document.querySelector("#popular-city-1");
+  cityElement.innerHTML = "The land of the Midnight Sun ☀️ ";
+}
+
+function viewOriginal(response) {
+  let originalCity = document.querySelector("#popular-city-1");
+  originalCity.innerHTML = "Norway";
+
+}
+
+let popularCities = document.querySelector ("#popular-city-1");
+popularCities.addEventListener("mouseover", viewCity, false);
+popularCities.addEventListener("mouseout", viewOriginal, false);
+
+
+
+
+
+function viewParis() {
+let parisElement = document.querySelector("#popular-city-2");
+parisElement.innerHTML = "Has a very oceanic climate 🌊";
+}
+
+function viewParisOriginal() {
+  let parisOriginal = document.querySelector("#popular-city-2");
+  parisOriginal.innerHTML = "Paris";
+}
+
+
+let parisCity = document.querySelector("#popular-city-2");
+parisCity.addEventListener("mouseover", viewParis, false);
+parisCity.addEventListener("mouseout", viewParisOriginal, false);
+
+
+
+
+function capeView() {
+  let cityElement = document.querySelector("#popular-city-3");
+  cityElement.innerHTML = "10% difference between summer and winter T℃";
+}
+
+function capeOriginal () {
+
+  let capeInitial = document.querySelector("#popular-city-3");
+  capeInitial.innerHTML = "Cape Town";
+
+
+}
+
+
+
+let capeCity = document.querySelector("#popular-city-3");
+capeCity.addEventListener("mouseover", capeView, false);
+capeCity.addEventListener("mouseout", capeOriginal, false);
+
+
+
+
 
 let forecastElement = document.querySelector("#daily-weather");
 forecastElement.innerHTML = forecastHtml;
