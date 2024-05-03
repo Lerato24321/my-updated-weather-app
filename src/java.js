@@ -92,22 +92,27 @@ function formatDate(date) {
 function displayForecast () {
 
 
+let forecastHtml = "";
 
+let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+days.forEach(function(day) {
 
-
-let forecast = document.querySelector("#hourly-weather");
-
-forecast.innerHTML = `
+forecastHtml =  forecastHtml + 
+`
 
  <p class="hour">
-            23:00 <br />
-            ⛅ <br />
-           16℃ &nbsp; <small>14℃</small>
+           <span> ${day} </span> <br />
+            <span> ⛅ </sapn> <br />
+           <span> 16℃ </span> &nbsp; <span>  <small>14℃</small> </span>
           </p>
 
 `;
 
 
+});
+
+let forecastElement = document.querySelector("#hourly-weather");
+forecastElement.innerHTML = forecastHtml;
 
 }
 
