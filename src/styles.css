@@ -134,8 +134,10 @@ footer {
 
 .day {
   color: rgb(230, 146, 160);
-  margin: 5px;
-
+  margin-top: -28px;
+  border: 1px solid white;
+  border-radius: 18px;
+  box-shadow: 2px 2px gray;
   padding: 8px;
   width: 85px;
   text-align: center;
@@ -173,8 +175,8 @@ footer {
   width: 40px;
   height: 40px;
   display: block;
-  margin: 0 auto;
-  background-color: rgba(191, 176, 179, 0.5);
+  margin: 10px auto -10px;
+  background-color: rgb(245, 201, 208);
   border-radius: 50%;
   opacity: 20px;
   
@@ -182,4 +184,5 @@ footer {
 
 .daily-temperature {
   margin-top: 40px;
+  
 }
