@@ -34,11 +34,16 @@ function updateWeatherInfo(response) {
 
   let weatherIcon = document.querySelector("#weather-app-icon");
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
+
+  getForecast(response.data.city);
+
+
+
 }
 
 function displayCity(city) {
   let apiKey = "700ad940f9ffadd843o04ae7ba43d1t8";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(updateWeatherInfo);
 }
@@ -86,12 +91,20 @@ function formatDate(date) {
 }
 
 
+function getForecast (city) {
+
+  let apiKey = "700ad940f9ffadd843o04ae7ba43d1t8";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
 
 
 
-function displayForecast () {
 
-
+// instead of repeating the code many times, use a loop.
+function displayForecast (response) {
+  
+  
 let forecastHtml = "";
 
 let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -121,7 +134,6 @@ searchButton.addEventListener("submit", searchCity);
 
 displayCity("Vanderbijlpark");
 
-displayForecast ();
 
 
 
